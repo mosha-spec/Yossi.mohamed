@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى يوسيي 🤍</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;800&family=Amiri:ital@1&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fcf9f5; /* بيج ناعم ومريح */
+            --text-dark: #3a3530;
+            --text-muted: #706961;
+            --accent-pink: #f7a8b0;
+            --accent-purple: #b39cd0;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Alexandria', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth; /* تنقل سلس بين الأقسام */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 5% 10%, rgba(247, 168, 176, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 95% 80%, rgba(179, 156, 208, 0.15) 0%, transparent 50%);
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* هيدر هادي وشيك */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: rgba(252, 249, 245, 0.8);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-pink);
+        }
+
+        .heart-badge {
+            background: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border: 1px solid #f0e6df;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .heart-badge:hover {
+            transform: scale(1.05);
+        }
+
+        /* سيكشن الواجهة الرئيسي */
+        .hero {
+            text-align: center;
+            padding: 90px 20px 40px 20px;
+            max-width: 750px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-quote {
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(120deg, #e07a5f, #b39cd0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 35px auto;
+        }
+
+        /* سيكشن القصة الرومانسية */
+        .story-section {
+            background: #fff;
+            padding: 60px 8%;
+            margin: 40px auto;
+            max-width: 900px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(163, 142, 124, 0.05);
+            border: 1px solid #f2eae4;
+            text-align: center;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .story-section h2 {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .story-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-pink);
+            border-radius: 2px;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 2;
+            text-align: justify;
+            text-justify: inter-word;
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+        }
+
+        .date-highlight {
+            font-family: 'Amiri', serif;
+            font-size: 2.2rem;
+            color: #e76f51;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+            padding: 5px 25px;
+            border-top: 2px dashed #f0e6df;
+            border-bottom: 2px dashed #f0e6df;
+            animation: pulse 2s infinite;
+        }
+
+        /* زراير لطيفة */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        .btn-main {
+            background-color: var(--text-dark);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(58, 53, 48, 0.15);
+        }
+
+        .btn-main:hover {
+            transform: translateY(-2px);
+            background-color: #4a433d;
+            box-shadow: 0 6px 20px rgba(58, 53, 48, 0.25);
+        }
+
+        /* سيكشن تفاصيل الراحة والاستقرار */
+        .content-grid {
+            padding: 20px 8% 80px 8%;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .story-card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 24px;
+            border: 1px solid #f2eae4;
+            box-shadow: 0 10px 30px rgba(163, 142, 124, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(163, 142, 124, 0.08);
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--accent-pink);
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .story-card h3 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .story-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* الفوتر الدافئ */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #f2eae4;
+            background: #fff;
+        }
+
+        .heart {
+            color: #e76f51;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* تأثير تساقط القلوب عبر الـ JavaScript */
+        .falling-heart {
+            position: fixed;
+            top: -20px;
+            font-size: 1.5rem;
+            pointer-events: none;
+            z-index: 999;
+            animation: fall linear forwards;
+        }
+
+        /* الأنميشن والتحركات */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(105vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .content-grid { grid-template-columns: 1fr; padding: 20px 5% 60px 5%; }
+            .story-text { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">من محمد <span>إلى</span> ياسمين</div>
+        <div class="heart-badge" onclick="createHeartShower()">
+            <span class="heart">❤️</span> مساحتنا الخاصة
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-quote">"وجودكِ هو اللي بيخلي لكل حاجة طعم حلو"</div>
+        <h1>مرحباً بكِ في ركنكِ الدافئ يا <span>ياسمين</span></h1>
+        <p>الموقع البسيط ده عملته مخصوص عشانكِ. عشان أقولكِ وسط زحمة الدنيا ودوشتها إني ممتن جداً لكل لحظة إحنا فيها مع بعض، ولأنكِ دايماً مصدر الراحة والاستقرار والأمان بالنسبة لي.</p>
+        <a href="#story" class="btn btn-main" onclick="createHeartShower()">اقرئي حكايتنا اللطيفة</a>
+    </section>
+
+    <section id="story" class="story-section">
+        <h2>بداية كل شيء جميل ✨</h2>
+        <div class="story-text">
+            يُحكى أن العالم كان يسير بإيقاعه الهادئ والروتيني المعتاد، حتى جاء ذلك اليوم المميز والمختلف عن كل الأيام. في تلك الليلة المتلألئة بالنجوم، انولدت طفلة بريئة، لم يكن يعلم أحد أن ضحكتها يوماً ما ستكون هي النور الذي يضيء عتمة أيام شخص آخر، وأن تفاصيلها الصغيرة ستصبح هي المأوى والوطن. كبرت تلك الطفلة لتصبح أجمل ياسمين في الدنيا، ولتجمعها الأقدار بقلبٍ يرى في وجودها الأمان والاستقرار والسلام الذي طالما بحث عنه. كانت ولادتها مجرد بداية لقصة حب وصداقة لن تنتهي أبداً.
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">اليوم الذي ابتسمت فيه السماء لتبدأ حكايتنا:</p>
+        <div class="date-highlight">27 / 11</div>
+    </section>
+
+    <section id="letters" class="content-grid">
+        
+        <div class="story-card">
+            <div class="card-meta">أنتِ الأمان</div>
+            <h3>راحتي النفسية وهدوئي</h3>
+            <p>لما بكون مضغوط أو الدنيا بتلخبط معايا، مجرد الكلام معاكِ بيرجعلي هدوئي. أنتِ المكان اللي بروحله عشان أفصل عن العالم وأحس بالاستقرار والسلام الحقيقي.</p>
+        </div>
+
+        <div class="story-card">
+            <div class="card-meta">ضحكتنا سوا</div>
+            <h3>تفاصيلنا الصغيرة التافهة</h3>
+            <p>أنا بجد بحب ضحكتنا سوا، والنكت الغريبة والقفشات اللي محدش بيفهمها غيرنا. يومي بيبقى أحلى وأخف على القلب بكتير طول ما أنتِ موجودة بتنوريه بخفة دمكِ اللطيفة.</p>
+        </div>
+
+        <div class="story-card">
+            <div class="card-meta">وعد ودعم</div>
+            <h3>خطوة بخطوة، دايماً جنبكِ</h3>
+            <p>عاوزك تعرفي دايماً إنك مش لوحدك، أنا دايماً موجود وجنبك في الحزن قبل الفرح وفي كل حاجة، أوعي تنسي إني دايماً في ظهرك وحياتك.</p>
+        </div>
+
+        <div class="story-card">
+            <div class="card-meta">متنسينيش</div>
+            <h3>إحنا إخوات برضه</h3>
+            <p>هنفضل إخوات وأصحاب دايماً مهما حصل في العلاقة عشان علاقتنا تبقى كاملة أصلاً لازم نكون كل حاجة في حياة بعض، وده اللي هيحصل حتى لو حصل نصيب إن شاء الله.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>صُنع بكل حب إلى يوسيي! | عام 2026 <span class="heart">❤️</span></p>
+    </footer>
+
+    <script>
+        function createHeartShower() {
+            for (let i = 0; i < 25; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('falling-heart');
+                    
+                    const heartTypes = ['❤️', '🤍', '💖', '🌸'];
+                    heart.innerText = heartTypes[Math.floor(Math.random() * heartTypes.length)];
+                    
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    
+                    const size = Math.random() * 1.5 + 1; 
+                    heart.style.fontSize = size + 'rem';
+                    
+                    const duration = Math.random() * 2 + 2; 
+                    heart.style.animationDuration = duration + 's';
+                    
+                    document.body.appendChild(heart);
+                    
+                    setTimeout(() => {
+                        heart.remove();
+                    }, duration * 1000);
+                }, i * 100); 
+            }
+        }
+    </script>
+</body>
+</html>
